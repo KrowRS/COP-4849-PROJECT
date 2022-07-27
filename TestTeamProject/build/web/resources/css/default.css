@@ -1,0 +1,58 @@
+body {
+    background-color: #ffffff;
+    font-size: 12px;
+    font-family: Verdana, "Verdana CE",  Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    color: #000000;
+    /*    margin: 10px;*/
+
+    /*Added by JG*/
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+
+}
+
+h1 {
+    font-family: Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    border-bottom: 3px solid #AFAFAF;
+    font-size:  20px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    color: darkblue;
+    text-align: center;
+}
+
+a:link, a:visited {
+    color: #045491;
+    font-weight : bold;
+    text-decoration: none;
+}
+
+a:link:hover, a:visited:hover  {
+    color: #045491;
+    font-weight : bold;
+    text-decoration : underline;
+}
+.ButtonStyle{
+    border: 3px solid #999;
+    padding:1px 4px 1px 4px;
+    color: #333;
+    background-color: #c2dfef;
+    text-decoration: none;
+    margin: 20px 40px 20px 40px;
+    display: inline-block;
+    cursor:pointer;
+}
+.LinkStyle{
+    color: #333;
+    background-color: #ffffff;
+    padding:1px 4px 1px 4px;
+    font-family: Verdana, "Verdana CE",  Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    font-size: 10px;
+    margin: 20px 40px 20px 40px;
+    display: inline-block;
+    cursor:pointer;
+}

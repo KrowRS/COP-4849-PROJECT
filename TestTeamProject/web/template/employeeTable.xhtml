@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+        <h:link outcome="template/employeeTable.xhtml" value="Employee Table"/><br/>
+        <ui:composition template="./template.xhtml">
+
+            <ui:define name="content">
+                <h2>Employees List</h2>
+                <hr/>
+                <h:dataTable value="#{empBean.allEmpEntries}" var="employee" border="1"
+                             styleClass="order-table"
+                             headerClass="order-table-header"
+                             rowClasses="order-table-odd-row,order-table-even-row">
+
+                    <h:column>
+
+                        <f:facet name="header">Employee Number</f:facet>	
+                            #{employee.empNo}
+                    </h:column>
+                    <h:column>
+
+                        <f:facet name="header">Employee Name</f:facet>	
+                            #{employee.eName}
+                    </h:column>
+                    <h:column>
+
+                        <f:facet name="header">Job Title</f:facet>	
+                            #{employee.job}
+                    </h:column>
+                    <h:column>
+
+                        <f:facet name="header">Manager</f:facet>	
+                            #{employee.mgr}
+                    </h:column>
+                    <h:column>
+
+                        <f:facet name="header">Hire Date</f:facet>	
+                            #{employee.hireDate}
+                    </h:column>
+                    <h:column>
+
+                        <f:facet name="header">Salary</f:facet>	
+                            #{employee.sal}
+
+                    </h:column>
+                    <h:column>
+
+                        <f:facet name="header">Comm</f:facet>	
+                            #{employee.comm}
+
+                    </h:column>
+                    <h:column>
+
+                        <f:facet name="header">Department Number</f:facet>	
+                            #{employee.deptNo}
+
+                    </h:column>
+                    <h:column>
+
+                        <f:facet name="header">Grade</f:facet>	
+                            #{employee.grade}
+
+                    </h:column>
+
+                </h:dataTable>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
