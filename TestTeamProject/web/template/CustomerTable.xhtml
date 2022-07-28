@@ -8,7 +8,75 @@
         <ui:composition template="./template1.xhtml">
 
             <ui:define name="content">
-                content
+                <h2>Customers List</h2>
+                <hr/>
+                <h:dataTable value="#{customerBean.allCustomerEntries}" var="customer" border="1"
+                             styleClass="order-table"
+                             headerClass="order-table-header"
+                             rowClasses="order-table-odd-row,order-table-even-row">
+
+                    <h:column>
+
+                        <f:facet name="header">Customer Id</f:facet>	
+                            #{customer.custId}
+                    </h:column>
+                    <h:column>
+
+                        <f:facet name="header">Name</f:facet>	
+                            #{customer.name}
+                    </h:column>
+                    <h:column>
+
+                        <f:facet name="header">Address</f:facet>	
+                            #{customer.address}
+                    </h:column>
+                    <h:column>
+
+                        <f:facet name="header">City</f:facet>	
+                            #{customer.city}
+                    </h:column>
+                    <h:column>
+
+                        <f:facet name="header">State</f:facet>	
+                            #{customer.state}
+                    </h:column>
+                    <h:column>
+
+                        <f:facet name="header">Zip</f:facet>	
+                            #{customer.zip}
+
+                    </h:column>
+                    <h:column>
+
+                        <f:facet name="header">Area</f:facet>	
+                            #{customer.area}
+
+                    </h:column>
+                    <h:column>
+
+                        <f:facet name="header">Phone</f:facet>	
+                            #{customer.phone}
+
+                    </h:column>
+                    <h:column>
+
+                        <f:facet name="header">RepID</f:facet>	
+                            #{customer.repId}
+
+                    </h:column>
+                    <h:column>
+
+                        <f:facet name="header">Credit Limit</f:facet>	
+                            #{customer.creditLimit}
+
+                    </h:column>
+                    <h:column>
+
+                        <f:facet name="header">Comments</f:facet>	
+                            #{customer.comments}
+
+                    </h:column>
+                </h:dataTable>
             </ui:define>
 
         </ui:composition>
