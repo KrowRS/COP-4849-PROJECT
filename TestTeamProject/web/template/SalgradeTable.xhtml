@@ -8,7 +8,31 @@
         <ui:composition template="./template7.xhtml">
 
             <ui:define name="content">
-                content
+                  <h2>Salgrade List</h2>
+                <hr/>
+                <h:dataTable value="#{salgradeBean.allSalgradeEntries}" var="salgrade" border="1"
+                             styleClass="order-table"
+                             headerClass="order-table-header"
+                             rowClasses="order-table-odd-row,order-table-even-row">
+
+                    <h:column>
+
+                        <f:facet name="header">Grade</f:facet>	
+                            #{salgrade.grade}
+                    </h:column>
+                    <h:column>
+
+                        <f:facet name="header">Low Sal</f:facet>	
+                            #{salgrade.loSal}
+                    </h:column>
+                    <h:column>
+
+                        <f:facet name="header">High Sal</f:facet>	
+                            #{salgrade.hiSal}
+                    </h:column>
+
+
+                </h:dataTable>
             </ui:define>
 
         </ui:composition>
