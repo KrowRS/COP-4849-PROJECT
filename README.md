@@ -1,8 +1,7 @@
 # COP4849 - Team Project
 - - - -
 This is a Web application that will display the main tables associated with the 
-Oracle 12c Enterprise “cretabs.sql” database script file. <br />
-There are several steps required to running this project locally so please follow the instructions below.
+Oracle 12c Enterprise “cretabs.sql” database script file. There are several steps required to running this project locally so please follow the instructions below.
 ## Requirements
 * JDK 8
 * Glassfish Server 4.1.2
