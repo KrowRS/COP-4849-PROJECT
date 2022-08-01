@@ -4,23 +4,24 @@
  */
 package project;
 
-
 import java.io.Serializable;
-import javax.faces.bean.ManagedBean;
 
 /**
- * @author justin
+ *
+ * @author jeremy
  */
-@ManagedBean
 public class DeptEntry implements Serializable {
+ 
+private int deptNo;
+private String dName;
+private String loc;
 
-    private int deptNo;
-    private String deptName;
-    private String loc;
+public DeptEntry(){
+}
 
-    public DeptEntry(int deptNo, String deptName, String loc) {
+    public DeptEntry(int deptNo, String dName, String loc) {
         this.deptNo = deptNo;
-        this.deptName = deptName;
+        this.dName = dName;
         this.loc = loc;
     }
 
@@ -32,12 +33,12 @@ public class DeptEntry implements Serializable {
         this.deptNo = deptNo;
     }
 
-    public String getDeptName() {
-        return deptName;
+    public String getdName() {
+        return dName;
     }
 
-    public void setDeptName(String deptName) {
-        this.deptName = deptName;
+    public void setdName(String dName) {
+        this.dName = dName;
     }
 
     public String getLoc() {
@@ -47,4 +48,5 @@ public class DeptEntry implements Serializable {
     public void setLoc(String loc) {
         this.loc = loc;
     }
+
 }

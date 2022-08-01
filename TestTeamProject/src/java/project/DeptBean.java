@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSF/JSFManagedBean.java to edit this template
- */
 package project;
 
 import java.io.Serializable;
@@ -20,17 +16,21 @@ import javax.naming.NamingException;
  *
  * @author jeremy
  */
-@Named(value = "DeptBean")
+@Named(value = "deptBean")
 @RequestScoped
 @ManagedBean
-public class DeptBean implements Serializable {
+public class DeptBean implements Serializable{
+
 
     @Inject
     private ConnectBean connectBean;
 
+    /**
+     * Creates a new instance of DeptBean
+     */
     public DeptBean() {
     }
-
+    
     public List<DeptEntry> getAllDeptEntries() throws NamingException {
 
         List<DeptEntry> deptEntries = new ArrayList<>();
@@ -40,12 +40,12 @@ public class DeptBean implements Serializable {
 
         try {
             statement = connection.createStatement();
-            resultSet = statement.executeQuery("select * from DEPT");
+            resultSet = statement.executeQuery("select * from DEPT order by DEPTNO");
             while (resultSet.next()) {
                 int deptNo = resultSet.getInt("DEPTNO");
-                String deptName = resultSet.getString("DNAME");
+                String dName = resultSet.getString("DNAME");
                 String loc = resultSet.getString("LOC");
-                DeptEntry deptEntry = new DeptEntry(deptNo, deptName, loc);
+                DeptEntry deptEntry = new DeptEntry(deptNo, dName, loc);
                 deptEntries.add(deptEntry);
             }
             return deptEntries;
@@ -56,5 +56,6 @@ public class DeptBean implements Serializable {
         return null;
 
     }
+
 
 }
