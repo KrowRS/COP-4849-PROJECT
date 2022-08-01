@@ -19,7 +19,7 @@ import javax.sql.DataSource;
 public class ConnectBean {
 
     private DataSource dataSource;
-    private String dataUrl = "jdbc:derby://localhost:1527/TestTeamProject";
+    private String dataUrl = "jdbc:derby://localhost:1527/TestProjectDB";
 
     public ConnectBean() {
 
