@@ -15,17 +15,14 @@
 
         <div id="top">
             <ui:insert name="top"><h1>Price Table</h1></ui:insert>
-             <h:form>
-                <h:commandLink action = "employeeTable" value="Employee Table" styleClass="ButtonStyle"/>
-                <h:commandLink action = "CustomerTable" value="Customer Table" styleClass="ButtonStyle"/>
-                <h:commandLink action = "DeptTable" value="Department Table" styleClass="ButtonStyle"/>
-                <h:commandLink action = "OrderTable" value="Ord Table" styleClass="ButtonStyle"/>
-                <h:commandLink action = "ItemTable" value="Item Table" styleClass="ButtonStyle"/>
-                <h:commandLink action = "ProductTable" value="Product Table" styleClass="ButtonStyle"/>
-                <h:commandLink action = "PriceTable" value="Price Table" styleClass="ButtonStyle"/>
-                <h:commandLink action = "SalgradeTable" value="Salary Grade Table" styleClass="ButtonStyle"/>
-            </h:form>
-            
+                <h:link outcome = "/Emp/employeeTable" value="Employee Table" styleClass="ButtonStyle"/>
+                <h:link outcome = "/Customer/CustomerTable" value="Customer Table" styleClass="ButtonStyle"/>
+                <h:link outcome = "/Dept/DeptTable" value="Department Table" styleClass="ButtonStyle"/>
+                <h:link outcome = "/Ord/OrderTable" value="Ord Table" styleClass="ButtonStyle"/>
+                <h:link outcome = "/Item/ItemTable" value="Item Table" styleClass="ButtonStyle"/>
+                <h:link outcome = "/Product/ProductTable" value="Product Table" styleClass="ButtonStyle"/>
+                <h:link outcome = "/Price/PriceTable" value="Price Table" styleClass="ButtonStyle"/>
+                <h:link outcome = "/Salgrade/SalgradeTable" value="Salary Grade Table" styleClass="ButtonStyle"/>
             
         </div>
 
