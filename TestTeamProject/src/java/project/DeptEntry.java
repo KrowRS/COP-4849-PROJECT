@@ -9,7 +9,7 @@ import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
 
 /**
- * @author justin
+ * @author jeremy
  */
 @ManagedBean
 public class DeptEntry implements Serializable {
