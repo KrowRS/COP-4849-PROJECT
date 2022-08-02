@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import javax.inject.Named;
 import javax.enterprise.context.ApplicationScoped;
+import javax.faces.bean.ManagedBean;
 import javax.sql.DataSource;
 
 /**
@@ -15,6 +16,7 @@ import javax.sql.DataSource;
  * @author justin
  */
 @Named(value = "connectBean")
+@ManagedBean(eager=true)
 @ApplicationScoped
 public class ConnectBean {
 
